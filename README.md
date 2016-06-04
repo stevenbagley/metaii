@@ -2,11 +2,12 @@
 
 ## Introduction
 
-This is an implementation of Val Schorre's Meta II language in Common
-Lisp. Meta II is a compiler-writing language, in which you express the
-language of the language using syntax similar to BNF. The input is
-compiled into an assembly language. The code here is a virtual machine
-for the target language.
+This is an implementation of Val Schorre's Meta II language, written
+in Common Lisp. Meta II is a compiler-writing language for
+syntax-directed translation, expressed in a syntax similar to BNF
+rules that are annotated to produce code in the target language. The
+code here is a virtual machine for the target language. The Meta II
+compiler can itself be written in Meta II.
 
 Schorre, D.V., 1964. Meta II: a Syntax-oriented Compiler Writing
 Language. In Proceedings of the 1964 19th ACM national conference (pp.
