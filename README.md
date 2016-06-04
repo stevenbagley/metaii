@@ -28,18 +28,22 @@ metaii.masm | The Meta II interpreter, compiled by Meta II
 
 ## Examples
 
-1. A simple example (from James Neighbors) of an algebraic expression
+* A simple example (from James Neighbors) of an algebraic expression
 language:
+
 ```lisp
 (run (build-instructions (parse-file "aexp.meta"))
      "fern:=5+6;ace:=fern*5;waldo:=fern+alpha/-beta^gamma;")
 ```
-2. Compiling the Meta II compiler.
+
+*  Compiling the Meta II compiler.
+
 ```lisp
 (run (build-instructions (parse-file "metaii.meta"))
      (file-as-string "metaii.meta"))
 ```
-3. Compiling the Meta II compiler using the compiled Meta II compiler.
+* Compiling the Meta II compiler using the compiled Meta II compiler.
+
 ```lisp
 (run (build-instructions (parse-file "metaii.masm"))
      (convert-single-to-double (file-as-string "metaii.meta")))
