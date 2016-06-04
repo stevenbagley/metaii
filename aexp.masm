@@ -1,0 +1,144 @@
+        ADR AEXP
+AEXP
+        CLL AS
+        BF L1
+L2
+        CLL AS
+        BT L2
+        SET
+        BE
+L1
+L3
+        R
+AS
+        ID
+        BF L4
+        CL 'address '
+        CI
+        OUT
+        TST ':='
+        BE
+        CLL EX1
+        BE
+        CL 'store'
+        OUT
+        TST ';'
+        BE
+L4
+L5
+        R
+EX1
+        CLL EX2
+        BF L6
+L7
+        TST '+'
+        BF L8
+        CLL EX2
+        BE
+        CL 'add'
+        OUT
+L8
+        BT L9
+        TST '-'
+        BF L10
+        CLL EX2
+        BE
+        CL 'sub'
+        OUT
+L10
+L9
+        BT L7
+        SET
+        BE
+L6
+L11
+        R
+EX2
+        CLL EX3
+        BF L12
+L13
+        TST '*'
+        BF L14
+        CLL EX3
+        BE
+        CL 'mpy'
+        OUT
+L14
+        BT L15
+        TST '/'
+        BF L16
+        CLL EX3
+        BE
+        CL 'div'
+        OUT
+L16
+L15
+        BT L13
+        SET
+        BE
+L12
+L17
+        R
+EX3
+        CLL EX4
+        BF L18
+L19
+        TST '^'
+        BF L20
+        CLL EX3
+        BE
+        CL 'exp'
+        OUT
+L20
+L21
+        BT L19
+        SET
+        BE
+L18
+L22
+        R
+EX4
+        TST '+'
+        BF L23
+        CLL EX5
+        BE
+L23
+        BT L24
+        TST '-'
+        BF L25
+        CLL EX5
+        BE
+        CL 'minus'
+        OUT
+L25
+        BT L24
+        CLL EX5
+        BF L26
+L26
+L24
+        R
+EX5
+        ID
+        BF L27
+        CL 'load '
+        CI
+        OUT
+L27
+        BT L28
+        NUM
+        BF L29
+        CL 'literal '
+        CI
+        OUT
+L29
+        BT L28
+        TST '('
+        BF L30
+        CLL EX1
+        BE
+        TST ')'
+        BE
+L30
+L28
+        R
+        END
