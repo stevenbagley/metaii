@@ -20,12 +20,13 @@ Other useful references:
 
 ## The files
 
-       File | Contents
-------------|---------
-metaii.lisp | The virtual machine in Common Lisp
-aexp.masm   | James Neighbors algebraic expression syntax, compiled by Meta II
-metaii.meta | The Meta II interpreter in Meta II
-metaii.masm | The Meta II interpreter, compiled by Meta II
+| File        | Contents                                                         |
+| ----------- | ---------------------------------------------------------------- |
+| metaii.lisp | The virtual machine in Common Lisp                               |
+| aexp.masm   | James Neighbors algebraic expression syntax, compiled by Meta II |
+| metaii.meta | The Meta II interpreter in Meta II                               |
+| metaii.masm | The Meta II interpreter, compiled by Meta II                     |
+
 
 ## Examples
 
